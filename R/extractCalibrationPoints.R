@@ -37,15 +37,15 @@ extractCalibrationPoints <- function( type = 'p',
 
   calpointsText <-
     paste0("list(x = c(",
-           round(calpoints$x[1],  roundValue), ",",
-           round(calpoints$x[2],  roundValue), ",",
-           round(calpoints$x[3],  roundValue), ",",
+           round(calpoints$x[1],  roundValue), ", ",
+           round(calpoints$x[2],  roundValue), ", ",
+           round(calpoints$x[3],  roundValue), ", ",
            round(calpoints$x[4],  roundValue), ")" ,"\n",
            "     y = c(",
-           round(calpoints$y[1],  roundValue), ",",
-           round(calpoints$y[2],  roundValue), ",",
-           round(calpoints$y[3],  roundValue), ",",
-           round(calpoints$y[4],  roundValue), ")"
+           round(calpoints$y[1],  roundValue), ", ",
+           round(calpoints$y[2],  roundValue), ", ",
+           round(calpoints$y[3],  roundValue), ", ",
+           round(calpoints$y[4],  roundValue), "))"
            )
 
   cat(calpointsText)
