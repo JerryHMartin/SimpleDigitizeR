@@ -17,6 +17,9 @@
 #' This function assumes the value goes from the minimum on the bottom to the
 #' maximum on the top.
 #'
+#' This code is based on https://rdataviz.wordpress.com/tag/locator/
+#'   (accessed July of 2018)
+#'
 #' @param calibrationPoints a list of calibration points as
 #' a list of x coordinates and another list with y coordinates.
 #' The points are in the order of ymax, ymin, xmax, xmin
