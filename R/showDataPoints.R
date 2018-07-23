@@ -19,7 +19,7 @@
 #' datapoints <- extractDataPoints()
 #'
 #' prepareExtractionPlot("figure_7_Rogers_Commission_1986.png")
-#' showDataPoints(calpoints)
+#' showDataPoints(datapoints)
 #'
 #' @export
 #'
