@@ -1,4 +1,4 @@
-#' prepareExtractionPlot.R
+#' prepareExtractionPlot
 #'
 #' This function plots an image to a graph.  This is necissary to extract the data.
 #'
