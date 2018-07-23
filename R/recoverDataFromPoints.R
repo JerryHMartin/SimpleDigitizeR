@@ -30,6 +30,8 @@
 #' @param ymin The minimum on the y axis of an extraction plot
 #' @param ymax The maximum on the y axis of an extraction plot
 #' @param dateFormat The formatting for the date.  The default is "%m/%d/%Y".
+#' @param xValueName The name of the x value in the returned dataset
+#' @param yValueName The name of the y value in the returned dataset
 #' The formatting information for the date is the same as the as.Date function.
 #' @param roundValue The number of decimal points to round data.
 #' @keywords time
@@ -52,7 +54,9 @@ recoverDataFromPoints <- function (calibrationPoints,
                                        xmin, xmax,
                                        ymin, ymax,
                                        dateFormat = "%m/%d/%Y",
-                                       roundValue = 2){
+                                       roundValue = 2,
+                                       xValueName = "x",
+                                       yValueName = "y"){
 
   x  <- calibrationPoints$x[c(3,4)]
   y  <- calibrationPoints$y[c(2,1)]
@@ -67,5 +71,7 @@ recoverDataFromPoints <- function (calibrationPoints,
 
   returnData$y <- round(dataPoints$y * cy[2] + cy[1], roundValue)
 
+  names(returnData) <- c(xValueName, yValueName)
+  
   return(returnData)
 }
