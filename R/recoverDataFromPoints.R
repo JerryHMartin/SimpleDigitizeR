@@ -1,4 +1,4 @@
-#' recoverDataFromDatePoints
+#' recoverDataFromPoints
 #'
 #' The function recovers data from a plot given the calibration points and
 #' data points.
@@ -44,7 +44,7 @@
 #' @export
 #'
 
-recoverDataFromDatePoints <- function (calibrationPoints,
+recoverDataFromPoints <- function (calibrationPoints,
                                        dataPoints,
                                        xmin, xmax,
                                        ymin, ymax,
