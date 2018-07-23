@@ -33,23 +33,29 @@ extractDataPoints <- function(numberOfPoints,
                        pch = pch, col = col, lwd = lwd)
 
   # Prepare points for displaying as text
-  xTextPoints <- round(datasetPoints$x[1], roundValue)
-  yTextPoints <- round(datasetPoints$x[1], roundValue)
+  xTextPoints <- format(round(datasetPoints$x[1], roundValue),
+                                   nsmall = roundValue)
+  yTextPoints <- format(round(datasetPoints$x[1], roundValue),
+                                   nsmall = roundValue)
   for(iPoint in 2:numberOfPoints){
     
     if (iPoint %% numberOfPointsInRow == 1){
 
       xTextPoints <- paste0(xTextPoints, ",\n        ", 
-                            round(datasetPoints$x[iPoint], roundValue))
+                            format(round(datasetPoints$x[iPoint], roundValue),
+                                   nsmall = roundValue))
       yTextPoints <- paste0(yTextPoints, ",\n        ",
-                            round(datasetPoints$y[iPoint], roundValue))
+                            format(round(datasetPoints$y[iPoint], roundValue),
+                                  nsmall = roundValue))
       
     }else{
     
       xTextPoints <- paste0(xTextPoints, ", ",
-                            round(datasetPoints$x[iPoint], roundValue))
+                            format(round(datasetPoints$x[iPoint], roundValue),
+                                  nsmall = roundValue))
       yTextPoints <- paste0(yTextPoints, ", ",
-                            round(datasetPoints$y[iPoint], roundValue))
+                            format(round(datasetPoints$y[iPoint], roundValue),
+                                  nsmall = roundValue))
     }
   }
 
