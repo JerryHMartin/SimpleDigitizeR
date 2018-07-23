@@ -38,16 +38,19 @@ extractDataPoints <- function(numberOfPoints,
   for(iPoint in 2:numberOfPoints){
     
     if (iPoint %% numberOfPointsInRow == 1){
-      xTextPoints <- paste0(xTextPoints, "\n        ")
-      yTextPoints <- paste0(yTextPoints, "\n        ")
-    }
+
+      xTextPoints <- paste0(xTextPoints, ",\n        ", 
+                            round(datasetPoints$x[iPoint], roundValue))
+      yTextPoints <- paste0(yTextPoints, ",\n        ",
+                            round(datasetPoints$y[iPoint], roundValue))
+      
+    }else{
     
-    xTextPoints <- paste0(xTextPoints, ", ",
-                         round(datasetPoints$x[iPoint], roundValue)
-                         )
-    yTextPoints <- paste0(yTextPoints, ", ",
-                         round(datasetPoints$y[iPoint], roundValue)
-                         )
+      xTextPoints <- paste0(xTextPoints, ", ",
+                            round(datasetPoints$x[iPoint], roundValue))
+      yTextPoints <- paste0(yTextPoints, ", ",
+                            round(datasetPoints$y[iPoint], roundValue))
+    }
   }
 
   datasetPointsText <-
