@@ -17,6 +17,9 @@
 #' This function assumes the value goes from the minimum on the bottom to the
 #' maximum on the top.
 #'
+#' This function will still work if minimum or maximum values are adjusted to 
+#' other values so long as the values given match the coorsponding point on the plot.  
+#'
 #' @param calibrationPoints a list of calibration points as
 #' a list of x coordinates and another list with y coordinates.
 #' The points are in the order of ymax, ymin, xmax, xmin
