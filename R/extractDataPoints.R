@@ -41,10 +41,10 @@ extractDataPoints <- function(numberOfPoints,
     
     if (iPoint %% numberOfPointsInRow == 1){
 
-      xTextPoints <- paste0(xTextPoints, ",\n        ", 
+      xTextPoints <- paste0(xTextPoints, ",\n          ", 
                             format(round(datasetPoints$x[iPoint], roundValue),
                                    nsmall = roundValue))
-      yTextPoints <- paste0(yTextPoints, ",\n        ",
+      yTextPoints <- paste0(yTextPoints, ",\n          ",
                             format(round(datasetPoints$y[iPoint], roundValue),
                                   nsmall = roundValue))
       
