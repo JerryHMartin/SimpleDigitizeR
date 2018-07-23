@@ -12,7 +12,7 @@
 #' @examples
 #'
 #'
-#' prepareExtractionPlot("figure_7_Rogers_Commission_1986.png")
+#' plotImage <- prepareExtractionPlot("figure_7_Rogers_Commission_1986.png")
 #'
 #' @export
 
