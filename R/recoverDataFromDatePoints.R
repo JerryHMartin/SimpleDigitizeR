@@ -52,7 +52,9 @@ recoverDataFromDatePoints <- function (calibrationPoints,
                                        beginDate, endDate,
                                        ymin, ymax,
                                        dateFormat = "%m/%d/%Y",
-                                       roundValue = 2){
+                                       roundValue = 2,
+                                       xValueName = "date",
+                                       yValueName = "yValues"){
   xmin <- 0
   xmax <- as.numeric(as.Date(endDate, dateFormat) -
                        as.Date(beginDate, dateFormat))
@@ -69,6 +71,8 @@ recoverDataFromDatePoints <- function (calibrationPoints,
     dataPoints$x * cx[2] + cx[1]
 
   returnData$y <- round(dataPoints$y*cy[2] + cy[1], roundValue)
-
+  
+  names(returnData) <- c(xValueName, yValueName)
+  
   return(returnData)
 }
