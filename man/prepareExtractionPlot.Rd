@@ -2,7 +2,7 @@
 % Please edit documentation in R/prepareExtractionPlot.R
 \name{prepareExtractionPlot}
 \alias{prepareExtractionPlot}
-\title{prepareExtractionPlot.R}
+\title{prepareExtractionPlot}
 \usage{
 prepareExtractionPlot(file, workingDirectory = NULL,
   main = "Data Extraction Plot", xlab = "x", ylab = "y")
