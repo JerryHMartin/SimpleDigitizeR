@@ -17,8 +17,7 @@
 #' This function assumes the value goes from the minimum on the bottom to the
 #' maximum on the top.
 #'
-#' This code is based on https://rdataviz.wordpress.com/tag/locator/
-#'   (accessed July of 2018)
+
 #'
 #' @param calibrationPoints a list of calibration points as
 #' a list of x coordinates and another list with y coordinates.
@@ -29,12 +28,10 @@
 #' @param xmax The maximum on the x axis of an extraction plot
 #' @param ymin The minimum on the y axis of an extraction plot
 #' @param ymax The maximum on the y axis of an extraction plot
-#' @param dateFormat The formatting for the date.  The default is "%m/%d/%Y".
+#' @param roundValue The number of decimal points to round data.
 #' @param xValueName The name of the x value in the returned dataset
 #' @param yValueName The name of the y value in the returned dataset
-#' The formatting information for the date is the same as the as.Date function.
-#' @param roundValue The number of decimal points to round data.
-#' @keywords time
+#' @keywords data extraction
 #' @examples
 #'
 #' prepareExtractionPlot("figure_7_Rogers_Commission_1986.png")
@@ -53,11 +50,13 @@ recoverDataFromPoints <- function (calibrationPoints,
                                        dataPoints,
                                        xmin, xmax,
                                        ymin, ymax,
-                                       dateFormat = "%m/%d/%Y",
                                        roundValue = 2,
                                        xValueName = "x",
                                        yValueName = "y"){
 
+# This code is based on https://rdataviz.wordpress.com/tag/locator/
+#   (accessed July of 2018)
+  
   x  <- calibrationPoints$x[c(3,4)]
   y  <- calibrationPoints$y[c(2,1)]
 
