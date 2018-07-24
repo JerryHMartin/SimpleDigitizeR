@@ -8,6 +8,11 @@ extractDataPoints(numberOfPoints, numberOfPointsInRow = 7, type = "p",
   pch = 4, col = "blue", lwd = 2, roundValue = 5)
 }
 \arguments{
+\item{numberOfPoints}{the number of datapoints to extract}
+
+\item{numberOfPointsInRow}{the number of points printed in the output 
+of the row}
+
 \item{type}{same as pch in bas graphics}
 
 \item{pch}{same as pch base graphics}
@@ -22,8 +27,18 @@ extractDataPoints(numberOfPoints, numberOfPointsInRow = 7, type = "p",
 This function extracts calibration points.
 }
 \details{
+To use this function first prepare an extraction plot using the
+prepareExtractionPlot function.
+
+Count the number of points in the dataset to be extracted.
+
+Run the function
+
+Click on every point in the dataset
+
 The text printed from this function can be copied directly as R code.
-This way the image does not need to be recalibrated every time the code is run.
+This way the image does not need to be recalibrated every time the code 
+is run.
 }
 \examples{
 
@@ -31,4 +46,5 @@ prepareExtractionPlot("figure_7_Rogers_Commission_1986.png")
 dataPoints <- extractDataPoints(24)
 
 }
-\keyword{time}
+\keyword{datapoint}
+\keyword{extraction}
