@@ -29,11 +29,10 @@
 #' @param endDate The end of a time coordinate on the x axis
 #' @param ymin The minimum on the y axis of an extraction plot
 #' @param ymax The maximum on the y axis of an extraction plot
-#' @param dateFormat The formatting for the date.  
+#' @param dateFormat The formatting for the date (same as the as.Date)  
+#' @param roundValue The number of decimal points to round data.
 #' @param xValueName The name assigned to the x value in the output dataset
 #' @param yValueName The name assigned to the y value in the output dataset
-#' The formatting information for the date is the same as the as.Date function.
-#' @param roundValue The number of decimal points to round data.
 #' @keywords time
 #' @examples
 #'
