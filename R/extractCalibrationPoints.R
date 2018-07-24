@@ -30,7 +30,7 @@ extractCalibrationPoints <- function( type = 'p',
                                       roundValue = 5){
 
   message(paste0("Click points on graph in this order \n",
-                 "(1)Ymax  (2)Ymin  (3)Xmax  (4)Xmin"))
+                 "(1)Ymax  (2)Ymin  (3)Xmin  (4)Xmax"))
 
   calpoints <- locator(n = 4, type = type,
                        pch = pch, col = col, lwd = lwd)
