@@ -56,7 +56,7 @@ extractDataPoints <- function(numberOfPoints,
     
     for(iPoint in 2:numberOfPoints){
       
-      if (mod(iPoint, numberOfPointsInRow) == 1){
+      if (iPoint %% numberOfPointsInRow == 1){
         
         xTextPoints <- paste0(xTextPoints, ",\n          ", 
                               format(round(datasetPoints$x[iPoint], roundValue),
