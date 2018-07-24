@@ -53,6 +53,7 @@ extractDataPoints <- function(numberOfPoints,
   
   # Copy subsequent points to text
   if (numberOfPoints > 1){
+    
     for(iPoint in 2:numberOfPoints){
       
       if (mod(iPoint, numberOfPointsInRow) == 1){
