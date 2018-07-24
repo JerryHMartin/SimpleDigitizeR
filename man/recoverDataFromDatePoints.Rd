@@ -24,14 +24,13 @@ a list of x coordinates and another list with y coordinates.}
 
 \item{ymax}{The maximum on the y axis of an extraction plot}
 
-\item{dateFormat}{The formatting for the date.}
+\item{dateFormat}{The formatting for the date (same as the as.Date)}
 
 \item{roundValue}{The number of decimal points to round data.}
 
 \item{xValueName}{The name assigned to the x value in the output dataset}
 
-\item{yValueName}{The name assigned to the y value in the output dataset
-The formatting information for the date is the same as the as.Date function.}
+\item{yValueName}{The name assigned to the y value in the output dataset}
 }
 \description{
 The function recovers data from a plot given the calibration points and
