@@ -5,8 +5,7 @@
 \title{recoverDataFromPoints}
 \usage{
 recoverDataFromPoints(calibrationPoints, dataPoints, xmin, xmax, ymin, ymax,
-  dateFormat = "\%m/\%d/\%Y", roundValue = 2, xValueName = "x",
-  yValueName = "y")
+  roundValue = 2, xValueName = "x", yValueName = "y")
 }
 \arguments{
 \item{calibrationPoints}{a list of calibration points as
@@ -24,14 +23,11 @@ a list of x coordinates and another list with y coordinates.}
 
 \item{ymax}{The maximum on the y axis of an extraction plot}
 
-\item{dateFormat}{The formatting for the date.  The default is "%m/%d/%Y".}
-
 \item{roundValue}{The number of decimal points to round data.}
 
 \item{xValueName}{The name of the x value in the returned dataset}
 
-\item{yValueName}{The name of the y value in the returned dataset
-The formatting information for the date is the same as the as.Date function.}
+\item{yValueName}{The name of the y value in the returned dataset}
 }
 \description{
 The function recovers data from a plot given the calibration points and
@@ -51,9 +47,6 @@ in the software then this function should be called multiple times.
 This function assumes min is on left and max is on right.
 This function assumes the value goes from the minimum on the bottom to the
 maximum on the top.
-
-This code is based on https://rdataviz.wordpress.com/tag/locator/
-  (accessed July of 2018)
 }
 \examples{
 
@@ -67,4 +60,5 @@ dataValues <- recoverDataFromDatePoints(calibrationPoints,
 
 
 }
-\keyword{time}
+\keyword{data}
+\keyword{extraction}
