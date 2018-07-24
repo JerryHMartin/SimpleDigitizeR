@@ -35,7 +35,7 @@ extractDataPoints <- function(numberOfPoints,
   # Prepare points for displaying as text
   xTextPoints <- format(round(datasetPoints$x[1], roundValue),
                                    nsmall = roundValue)
-  yTextPoints <- format(round(datasetPoints$x[1], roundValue),
+  yTextPoints <- format(round(datasetPoints$y[1], roundValue),
                                    nsmall = roundValue)
   for(iPoint in 2:numberOfPoints){
     
