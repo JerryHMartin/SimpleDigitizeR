@@ -24,7 +24,7 @@ a list of x coordinates and another list with y coordinates.}
 
 \item{ymax}{The maximum on the y axis of an extraction plot}
 
-\item{dateFormat}{The formatting for the date.  The default is "%m/%d/%Y".}
+\item{dateFormat}{The formatting for the date.}
 
 \item{roundValue}{The number of decimal points to round data.}
 

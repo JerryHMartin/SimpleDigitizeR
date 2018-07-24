@@ -10,8 +10,7 @@ extractDataPoints(numberOfPoints, numberOfPointsInRow = 7, type = "p",
 \arguments{
 \item{numberOfPoints}{the number of datapoints to extract}
 
-\item{numberOfPointsInRow}{the number of points printed in the output 
-of the row}
+\item{numberOfPointsInRow}{the number of points printed per row in output}
 
 \item{type}{same as pch in bas graphics}
 
