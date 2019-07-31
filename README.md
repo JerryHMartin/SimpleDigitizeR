@@ -30,6 +30,53 @@ After the library is installed it is to be loaded.
     library(SimpleDigitizeR)
 ```
 
-### Displaying plot Prior to Calibration and Data Extraction
+### Displaying plot for calibration and data extraction
 
-prepareExtractionPlot(PlotImageFileName)
+After loading the library set the working directory to the image.  The image is plotted in a manner to prepare for data extraction.
+
+```r
+setwd("c:\wherever the image is")
+prepareExtractionPlot("PlotImageFileName.png")
+```
+
+### Calibrating the plot
+
+When the image is plotted run the calibration procedure
+
+```r
+calpoints <- extractCalibrationPoints()
+```
+
+Click on the figure following the instructions.
+
+There are two outputs to this step.  
+(1) calpoints will have the x-y coordinates of the points needed for calibration.
+(2) text will be output so the calibration points can be hard coded for later pre-loading.  (This prevents from needing to repeat the step if modifying errant points.)
+
+Show calibration points is a method for testing if pre-loaded points are in the correct location.
+
+```r
+showCalibrationPoints(calpoints)
+```
+
+### Extracting the data points
+
+Count the number of data points in the plot.  Use the extractDataPoints command to extract the points.
+
+After running the command click on each of the points.
+
+```r
+datapoints <- extractDataPoints(10)
+```
+
+The output will be the x-y coordinates of the data in the plot.
+
+#### Recovering the data
+
+The recoverDataFromPoints and RecoverDataFromDatePoints are available for retrieving the data from the plot.
+
+
+
+
+
+
