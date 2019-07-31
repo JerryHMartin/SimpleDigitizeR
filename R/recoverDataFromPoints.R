@@ -47,31 +47,33 @@
 #'
 
 recoverDataFromPoints <- function (calibrationPoints,
-                                       dataPoints,
-                                       xmin, xmax,
-                                       ymin, ymax,
-                                       roundValue = 2,
-                                       xValueName = "x",
-                                       yValueName = "y"){
-
-# This code is based on https://rdataviz.wordpress.com/tag/locator/
-#   (accessed July of 2018)
+                                   dataPoints,
+                                   xmin, xmax,
+                                   ymin, ymax,
+                                   roundValue = 2,
+                                   xValueName = "x",
+                                   yValueName = "y"){
+  
+  # This code is based on https://rdataviz.wordpress.com/tag/locator/
+  #   (accessed July of 2018)
   
   x  <- calibrationPoints$x[c(3,4)]
   y  <- calibrationPoints$y[c(2,1)]
-
+  
   cx <- lm(formula = c(xmin, xmax) ~ c(x))$coeff
   cy <- lm(formula = c(ymin, ymax) ~ c(y))$coeff
-
+  
   returnData <- dataPoints
-
+  
   if(exists("beginDate")){
-     returnData$x <- as.Date(beginDate, dateFormat) +
-       dataPoints$x * cx[2] + cx[1]
+    returnData$x <- as.Date(beginDate, dateFormat) +
+      dataPoints$x * cx[2] + cx[1]
+  }else{
+    returnData$x <- round(dataPoints$x * cx[2] + cx[1], roundValue)
   }
   
   returnData$y <- round(dataPoints$y * cy[2] + cy[1], roundValue)
-
+  
   names(returnData) <- c(xValueName, yValueName)
   
   return(returnData)
