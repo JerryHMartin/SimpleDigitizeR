@@ -65,9 +65,11 @@ recoverDataFromPoints <- function (calibrationPoints,
 
   returnData <- dataPoints
 
-  returnData$x <- as.Date(beginDate, dateFormat) +
-    dataPoints$x * cx[2] + cx[1]
-
+  if(exists("beginDate")){
+     returnData$x <- as.Date(beginDate, dateFormat) +
+       dataPoints$x * cx[2] + cx[1]
+  }
+  
   returnData$y <- round(dataPoints$y * cy[2] + cy[1], roundValue)
 
   names(returnData) <- c(xValueName, yValueName)
