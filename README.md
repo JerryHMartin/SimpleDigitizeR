@@ -3,10 +3,7 @@ R package for digitizing images of graphs
 
 ## General Information
 
-This package performs the digitization process in descrete segments. This has several advantages.
-
-(1) Some functionality is encapsulated
-(2) This is useful for converting a large amount of similar data
+This package can be used to convert a digital image of a plot to data. 
 
 This package can handle date data on the x axis.
 
